@@ -216,6 +216,26 @@ main {margin-top: 30px; margin-bottom: 100px;}
 
 .btn-container button:hover {opacity: .8; transition: all .2s;}
 
+/* footer */
+
+footer, .row p {color: #fff;}
+footer {
+    background-color: grey;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    padding: 50px 300px;
+}
+
+footer .row h1 {
+    margin-bottom: 20px;
+    text-decoration: underline wavy 1.3px;
+    color: #fdf5e6;
+}
+footer .row a:hover {opacity: .8;}
+
+/* media */
+
 @media only screen and (max-width: 800px) {
     .nav-links, .submenu {display: none;}
     header {
