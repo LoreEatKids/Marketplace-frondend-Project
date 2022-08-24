@@ -17,6 +17,7 @@ h1, h2 {
 
 .d-flex {display: flex; align-items: center;}
 .jc-sb {justify-content: space-between;}
+.jc-sa {justify-content: space-around; gap: 20px;}
 
 button {cursor: pointer; background: transparent; border: none; font-family: inherit;}
 
@@ -54,6 +55,39 @@ header a:hover::after {width: 100%;}
     transition: transform .25s;
 }
 
+.nav-aside-icon {width: 21px; height: 21px;}
+.nav-aside-icon-2 {width: 30px; height: 30px;}
+
+/* nav aside links 1 */
+
+.nav-aside-links li:nth-child(1) {
+    padding-top: 30px;
+    justify-content: end;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.nav-aside-links li:not(:first-child) {
+    margin-top: 20px;
+    padding-left: 10px;
+}
+.nav-aside-links a h1 {font-size: 22px;}
+.nav-aside-links-2 a h1 {font-size: 19px;}
+
+/* nav aside links 2 */
+
+.nav-aside-links-2 {
+    border-top: 1px solid black;
+    margin: 50px 50px;
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.nav-aside-icon-2 li a {gap: 30px;}
+
+/* submenu */
+
 .submenu {
     justify-content: space-around;
     margin-top: 100px;
@@ -70,6 +104,8 @@ header a:hover::after {width: 100%;}
 
 .column a {color: grey; font-size: .9em;}
 .column a:hover {color: #000; transition: color .2s;}
+
+/**/
 
 .logo {
     cursor: pointer;
