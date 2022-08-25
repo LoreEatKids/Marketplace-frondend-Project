@@ -11,3 +11,12 @@ const menuIsActive = () => {
 
 closeBtn.addEventListener("click", menuIsActive);
 hamburger.addEventListener("click", menuIsActive);
+
+// const fadeout = ()=> {
+//     const loaderWrapper = document.querySelector(".wrapper");
+//     loaderWrapper.classList.add("fade");
+// }
+
+// window.addEventListener("load", fadeout)
+
+// preloader
