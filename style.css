@@ -218,23 +218,87 @@ main {margin-top: 30px; margin-bottom: 100px;}
 
 /* footer */
 
-footer, .row p {color: #fff;}
 footer {
-    background-color: grey;
-    width: 100vw;
+    background: rgb(26, 26, 29) none repeat scroll 0% 0%;
+    width: 100%;
     position: absolute;
     left: 0;
-    padding: 50px 300px;
+    color: #fff;
+    padding: 48px 38px;
 }
 
-footer .row h1 {
+footer a {color: rgb(160, 160, 160)}
+
+.footer-container {
+    flex-flow: row wrap;
+}
+
+.footer-item1, .footer-item2 {flex: 1 1 50%;}
+
+.footer-row {
+    width: 30%;
+    float: left;
+}
+
+.footer-row-title {
+    font-weight: 400;
     margin-bottom: 20px;
-    text-decoration: underline wavy 1.3px;
-    color: #fdf5e6;
 }
-footer .row a:hover {opacity: .8;}
 
-/* media */
+.footer-row-info {
+    margin-top: 20px;
+    line-height: 23px;
+}
+
+.footer-row-info a {font-size: .93em;}
+
+.footer-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.apps-list {display: flex;}
+
+.app-link {
+    height: 37px; 
+    display: inline-block;
+}
+
+.app-icon-1,
+.app-icon-2 {
+    height: 36px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 120px;
+}
+
+.app-icon-1 {background-image: url(https://s2.coinmarketcap.com/static/cloud/img/app_store_badge_white_1.svg?_=dc3843f);}
+.app-icon-2 {background-image: url(https://s2.coinmarketcap.com/static/cloud/img/google_play_badge_1.png?_=dc3843f);}
+
+@media only screen and (max-width: 1280px) {
+    .footer-item1 {flex: 1 1 100%;} 
+    .footer-item1 {margin-bottom: 20px;}
+}
+
+@media only screen and (max-width: 720px) {
+    .footer-row {width: 50%;}
+    .footer-meta {margin-top: 40px;}
+    .footer-row:last-child {margin-top: 20px;}
+    .footer-item1 {margin-bottom: 40px;}
+}
+
+@media only screen and (min-width: 768px) {
+    .footer-meta {padding: 40px 155px 0 0;}
+}
+
+@media only screen and (max-width: 470px) {
+    .apps-list {display: unset;}
+    .apps-list .app-icon-1 {margin-bottom: 6px;}
+}
+
+/* whole WS medias */
 
 @media only screen and (max-width: 800px) {
     .nav-links, .submenu {display: none;}
@@ -262,9 +326,6 @@ footer .row a:hover {opacity: .8;}
         visibility: visible;
         transform: translateX(-156px);
         transition: transform .25s;
-
-        /* filter: blur(8px);
-        -webkit-filter: blur(8px); */
     }
 
     .serch-links li:not(:last-child) .nav-aside.active {display: none;}
