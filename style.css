@@ -370,7 +370,8 @@ footer a {color: rgb(160, 160, 160)}
 
     .container {gap: 20px;}
     .container img {max-width: 320px;}
-    .container li:not(:last-child) {scroll-margin-left: 60px;}
+    .container li:not(:last-child) {scroll-margin-left: 30px;}
+    .price-container {padding-right: 0;}
 
     .pre-content img {margin-top: 70px;}
 
