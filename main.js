@@ -3,23 +3,17 @@
 const hamburger = document.querySelector(".hamburger");
 const asideNav = document.querySelector(".nav-aside");
 const closeBtn = document.querySelector(".nav-aside-close");
+const wrapper = document.querySelector(".wrapper");
 
 const menuIsActive = () => {
     hamburger.classList.toggle("active");
     asideNav.classList.toggle("active");
+    wrapper.classList.toggle("active");
 }
 
 closeBtn.addEventListener("click", menuIsActive);
 hamburger.addEventListener("click", menuIsActive);
-
-// const fadeout = ()=> {
-//     const loaderWrapper = document.querySelector(".wrapper");
-//     loaderWrapper.classList.add("fade");
-// }
-
-// window.addEventListener("load", fadeout)
-
-// preloader
+wrapper.addEventListener("click", menuIsActive);
 
 // shoes: [
 //     "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/e777c881-5b62-4250-92a6-362967f54cca/scarpa-air-force-1-07-2PL28X.png",
@@ -52,7 +46,7 @@ function displayProducts(products, selectedCurrency) {
                 <h1 class="product-name">${product[2]}</h1>
                 <p class="product-prezzo">${product[1]}${selectedCurrency}</p>
             </div>
-            <p class="product-desc">${product[3]} - ${product[4]}</p>
+            <p class="product-desc">${product[3]} - <b>${product[4]}</b></p>
         </li>
         `
         productsContainer.insertAdjacentHTML("beforeend", html);

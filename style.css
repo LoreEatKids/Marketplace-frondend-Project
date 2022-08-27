@@ -36,6 +36,22 @@ button {cursor: pointer; background: transparent; border: none; font-family: inh
     visibility: hidden;
 } pre loader */
 
+.wrapper {
+    background: hsla(0,0%,7%,.36);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: opacity .8s ease,visibility 0s;
+    overflow: auto;
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.wrapper.active {display: flex;}
+
 header {
     padding: 20px 0px;
     padding-right: 10px;
@@ -213,6 +229,7 @@ main {margin-top: 30px; margin-bottom: 100px;}
     width: 100%;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 60px;
 }
 
 .pre-content-text {
@@ -363,7 +380,7 @@ footer a {color: rgb(160, 160, 160)}
     .serch-links .carrello::after {
         display: inline-block;
         position: fixed;
-        right: 100px;
+        right: 105px;
         text-align: center;
         font-weight: bold;
     }
