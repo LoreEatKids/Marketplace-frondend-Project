@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="components/homepage.css">
+    <link rel="stylesheet" href="components/item.css">
     <link rel="stylesheet" href="components/default/default.css">
     <link rel="stylesheet" href="components/default/header.css">
     <link rel="stylesheet" href="components/default/footer.css">
-    <title>MarketPlace Front-End Project</title>
+    <title>Item deatails</title>
 </head>
 <body>
     <div class="wrapper"></div>
@@ -99,119 +99,97 @@
         </ul>
     </header>
 
-    <div class="submenu">
-        <div class="column">
-            <h1 class="sebmenu_title">Column 1</h1>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-        </div>
-        <div class="column">
-            <h1 class="sebmenu_title">Column 1</h1>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-        </div>
-        <div class="column">
-            <h1 class="sebmenu_title">Column 1</h1>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-        </div>
-        <div class="column">
-            <h1 class="sebmenu_title">Column 1</h1>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-            <p><a href="#">Lorem, ipsum dolor.</a></p>
-        </div>
-    </div>
-
-    <section class="pre-content">
-        <img src="static/1.png" draggable="false"></img>
-
-        <div class="pre-content-text">
-            <h1><b>DAI SEMPRE IL MEGLIO DI TE</b></h1>
-            <p>Scegli Nike!</p>
-
-            <div class="btn-container">
-                <button>Bambini</button>
-                <button>Tutti gli articoli</button>
-                <button>Novità</button>
-            </div>
-        </div>
-
-    </section>
-
     <main>
-        <h1 class="title" translate="no">Magliette</h1>
+        <section class="img-section"></section>
 
-        <ul class="container"></ul>
+        <section class="details-section">
 
-        <h1 class="title" translate="no">Scarpe</h1>
-        <ul class="container">
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/e777c881-5b62-4250-92a6-362967f54cca/scarpa-air-force-1-07-2PL28X.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
+                <div class="details-main">
+                    <h1 class="name" translate="no"><b>Nike Suit</b></h1>
+                    <p class="description">Tuta nike suit 2021 - Ragazza</p>
+                    <p class="price">10,99$</p>
                 </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
 
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
+                <form>
+                        <div class="details-types">
+    
+                                <div class="details-type-color-1">
+                                    <input type="radio" name="NikeSuit" value="NikeSuit:Color:Pink" id="color-pink" class="opacity">
+                                    <label for="color-pink">
+                                        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/74a063da-7bcc-429f-9281-24a9c658519f/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png" alt="Colore: Pink" width="60px">
+                                    </label>
+                                </div>
 
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
+                                <div class="details-type-color-1">
+                                    <input type="radio" name="NikeSuit" value="NikeSuit:Color:Black" id="color-black"
+                                    class="opacity">
+                                    <label for="color-black">
+                                        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/476ea37d-7f76-4c6a-b6d7-c0c2665fdd09/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png" alt="Colore: Black" width="60px">
+                                    </label>
+                                </div>
+    
+                            </div>
+                    </fieldset>
+    
+                </form>
 
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
+                <form id="taglie">
+                <fieldset class="details-taglie">
 
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
+                        <legend aria-label="Seleziona la taglia/misura">
+                            <div>
+                                <p>Seleziona la tua taglia!</p>
+                                <a href="#"><b>Guida alle taglie</b></a>
+                            </div>
+                        </legend>
 
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
+                        <div class="details-taglie-container">
 
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
+                            <div>
+                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:XS" id="input-1">
+                                <label for="input-1">
+                                    XS
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:S" id="input-2">
+                                <label for="input-2">
+                                    S
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:M" id="input-3">
+                                <label for="input-3">
+                                    M
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:L" id="input-4">
+                                <label for="input-4">
+                                    L
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:XL" id="input-5">
+                                <label for="input-5">
+                                    XL
+                                </label>
+                            </div>
+
+                        </div>
+                </fieldset>
+
+                </form>
+
+                <div class="btn-container">
+                    <button class="confirm-btn">Aggiungi al carrello!</button>
                 </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-        </ul>
+
+        </section>
     </main>
 
     <footer>
@@ -271,7 +249,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="/components/scripts/home.js"></script>
+    <script src="./components/scripts/item.js"></script>
 </body>
 </html>

@@ -41,7 +41,9 @@ function displayProducts(products, selectedCurrency) {
         const html = 
         `
         <li>
-            <img src="${product[0]}">
+            <a href="item.html" target="_blank">
+                <img src="${product[0]}">
+            </a>
             <div class="price-container d-flex jc-sb">
                 <h1 class="product-name">${product[2]}</h1>
                 <p class="product-prezzo">${product[1]}${selectedCurrency}</p>

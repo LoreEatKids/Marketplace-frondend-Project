@@ -1,0 +1,71 @@
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 130px;
+    margin-bottom: 130px;
+    display: flex;
+    gap: 10px;
+}
+
+.img-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img-section img {
+    width: 30%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {.img-section img {width: 40%;}}
+@media screen and (max-width: 600px) {
+    .img-section img {width: 90%;}
+    .img-section {gap: 20px;}
+    main {margin-top: 100px;}
+}
+
+@media only screen and (max-width: 800px) {main {display: unset;}}
+
+.details-main .description {
+    margin-top: 2px;
+    font-size: 17px;
+}
+
+.details-main .price {margin-top: 30px;}
+
+.details-types {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.opacity {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+}
+
+input[type=radio]:hover + label {cursor: pointer; opacity: .8;}
+
+input[type=radio]:focus + label {
+	border: 1px solid #000;
+    height: 65px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 1.5px;
+}
+
+.details-section {
+    width: 456px;
+}
+
+.details-taglie-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+}
