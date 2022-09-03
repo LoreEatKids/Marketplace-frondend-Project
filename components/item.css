@@ -27,15 +27,26 @@ main {
     .img-section img {width: 40%;}
 }
 
+.details-section {
+    width: 456px;
+}
+
 @media screen and (max-width: 600px) {
     .img-section img {width: 90%;}
     .img-section {gap: 20px;}
     main {margin-top: 100px;}
-}
+    .details-section {
+        width: 100%;
+        padding: 5% 5%;}
+    }
 
 @media only screen and (max-width: 800px) {
     main {display: unset;}
     .img-section {margin-top: 100px;}
+    .details-section {
+        width: 100%;
+        padding: 5% 10%;
+    }
 }
 
 .details-main .description {
@@ -71,10 +82,6 @@ input[type=radio]:hover + label {cursor: pointer; opacity: .8;}
     max-height: 19px; 
     border: none;
     padding: 4px;
-}
-
-.details-section {
-    width: 456px;
 }
 
 .details-taglie-container {

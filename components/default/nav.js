@@ -12,3 +12,8 @@ const menuIsActive = () => {
 closeBtn.addEventListener("click", menuIsActive);
 hamburger.addEventListener("click", menuIsActive);
 wrapper.addEventListener("click", menuIsActive);
+
+window.addEventListener("load", ()=> {
+    if (localStorage.getItem("cart-items-number") != null) document.querySelector(".carrello").dataset.itemsNumber = localStorage.getItem("cart-items-number");
+    else document.querySelector(".carrello").dataset.itemsNumber = 0;
+})
