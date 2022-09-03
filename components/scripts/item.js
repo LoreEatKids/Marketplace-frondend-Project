@@ -1,7 +1,6 @@
 "use strict";
 
 const container = document.querySelector(".img-section");
-
 const color1El = document.querySelector("#color-pink");
 const color2El = document.querySelector("#color-black");
 
@@ -21,9 +20,8 @@ const imgs = {
 }
 
 function displayItemsLight(arr) {
-    const productClass = arr === imgs.linksLight ? "light" : "dark";
     arr.forEach(el => {
-        const html = `<img src="${el}" alt="Maglietta" class="product-${productClass}" id="product" draggable="false">` 
+        const html = `<img src="${el}" alt="Maglietta" id="product" draggable="false">` 
         container.insertAdjacentHTML("beforeend", html);
     });
 }
@@ -32,19 +30,24 @@ displayItemsLight(imgs.linksLight)
 
 color1El.addEventListener("click", ()=> {
     const products = document.querySelectorAll("#product");
-    let count = 0;
-    products.forEach(product => {
-        product.src = imgs.linksLight[count];
-        count++;
+
+    document.querySelector(".color1-img").style.border = "1px solid #000";
+    document.querySelector(".color2-img").style.border = "0";
+
+    products.forEach((product, x) => {
+        product.src = imgs.linksLight[x];
     })
 })
 
 color2El.addEventListener("click", ()=> {
     const products = document.querySelectorAll("#product");
-    let count = 0;
-    products.forEach(product => {
-        product.src = imgs.linksDark[count];
-        count++;
+
+    document.querySelector(".color1-img").style.border = "0";
+    document.querySelector(".color2-img").style.border = "1px solid #000";
+
+
+    products.forEach((product, x) => {
+        product.src = imgs.linksDark[x];
     })
 
     const inputs = document.querySelectorAll("input[name='NikeSuit']");
@@ -53,24 +56,28 @@ color2El.addEventListener("click", ()=> {
 
 const cartItems = [];
 
-document.querySelector(".confirm-btn").addEventListener("click", ()=> {
+document.querySelector("#confirm-btn").addEventListener("click", ()=> {
     const inputs = document.querySelectorAll("input[name='NikeSuitTaglia']");
     const inputsColor = document.querySelectorAll("input[name='NikeSuit']");
 
     for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].checked && inputsColor[i].checked) {
+        if (inputs[i].checked) {
+
             const value = inputs[i].value;
+
             const valueName = value.split(":")[0];
             const valueTaglia = value.split(":")[1];
-            
-            document.querySelector(".carrello").dataset.itemsNumber++;
 
-            for (let x = 0; x < inputsColor.length; x++) { 
-                const valueColor = inputsColor[x].value.split(":")[2];
-                cartItems.push([valueName, valueTaglia, valueColor]);
-            }
+            inputsColor.forEach(color => {
+                if (color.checked) {
+                    cartItems.push([valueName, valueTaglia, color.value.split(":")[2]])
+                    window.localStorage.setItem("cart", JSON.stringify(cartItems))
+                    window.localStorage.setItem("cart-items-number", Number(document.querySelector(".carrello").dataset.itemsNumber) + 1)
+                };
+            })
+
+            console.log(cartItems, window.localStorage);            
+            document.querySelector(".carrello").dataset.itemsNumber++;
         } 
     }
-
-    console.log(cartItems) 
 })

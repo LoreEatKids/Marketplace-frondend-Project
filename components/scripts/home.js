@@ -1,20 +1,5 @@
 "use strict";
 
-const hamburger = document.querySelector(".hamburger");
-const asideNav = document.querySelector(".nav-aside");
-const closeBtn = document.querySelector(".nav-aside-close");
-const wrapper = document.querySelector(".wrapper");
-
-const menuIsActive = () => {
-    hamburger.classList.toggle("active");
-    asideNav.classList.toggle("active");
-    wrapper.classList.toggle("active");
-}
-
-closeBtn.addEventListener("click", menuIsActive);
-hamburger.addEventListener("click", menuIsActive);
-wrapper.addEventListener("click", menuIsActive);
-
 // shoes: [
 //     "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/e777c881-5b62-4250-92a6-362967f54cca/scarpa-air-force-1-07-2PL28X.png",
 //     "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/d9f1d9ee-a848-4a36-aab9-48b241078ebb/scarpa-air-force-1-le-7XSl5m.png",

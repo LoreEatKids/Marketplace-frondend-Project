@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="components/item.css">
     <link rel="stylesheet" href="components/default/default.css">
     <link rel="stylesheet" href="components/default/header.css">
     <link rel="stylesheet" href="components/default/footer.css">
-    <title>Item deatails</title>
+    <link rel="stylesheet" href="components/cart.css">
+    <title>View Your Cart Order</title>
 </head>
 <body>
     <div class="wrapper"></div>
@@ -102,96 +102,10 @@
     </header>
 
     <main>
-        <section class="img-section"></section>
-
-        <section class="details-section">
-
-                <div class="details-main">
-                    <h1 class="name" translate="no"><b>Nike Suit</b></h1>
-                    <p class="description">Tuta nike suit 2021 - Ragazza</p>
-                    <p class="price">10,99$</p>
-                </div>
-
-                <form>
-                        <div class="details-types">
-    
-                                <div class="details-type-color-1">
-                                    <input type="radio" name="NikeSuit" value="NikeSuit:Color:Pink" id="color-pink" class="opacity">
-                                    <label for="color-pink">
-                                        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/74a063da-7bcc-429f-9281-24a9c658519f/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png" alt="Colore: Pink" width="60px" class="color1-img" style="border: 0;">
-                                    </label>
-                                </div>
-
-                                <div class="details-type-color-1">
-                                    <input type="radio" name="NikeSuit" value="NikeSuit:Color:Black" id="color-black"
-                                    class="opacity">
-                                    <label for="color-black">
-                                        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/476ea37d-7f76-4c6a-b6d7-c0c2665fdd09/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png" class="color2-img" alt="Colore: Black" width="60px" style="border: 0;">
-                                    </label>
-                                </div>
-    
-                            </div>
-                    </fieldset>
-    
-                </form>
-
-                <form id="taglie">
-                <fieldset class="details-taglie">
-
-                        <legend aria-label="Seleziona la taglia/misura">
-                            <div>
-                                <p>Seleziona la tua taglia!</p>
-                                <a href="#"><b>Guida alle taglie</b></a>
-                            </div>
-                        </legend>
-
-                        <div class="details-taglie-container">
-
-                            <div>
-                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:XS" id="input-1">
-                                <label for="input-1">
-                                    XS
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:S" id="input-2">
-                                <label for="input-2">
-                                    S
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:M" id="input-3">
-                                <label for="input-3">
-                                    M
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:L" id="input-4">
-                                <label for="input-4">
-                                    L
-                                </label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="NikeSuitTaglia" value="NikeSuit:XL" id="input-5">
-                                <label for="input-5">
-                                    XL
-                                </label>
-                            </div>
-
-                        </div>
-                </fieldset>
-
-                </form>
-
-                <div class="btn-container">
-                    <button class="button-9" id="confirm-btn" role="button">Aggiungi al carrello!</button>
-                </div>
-
-        </section>
+        <h1>Cart ITEMS:</h1>
+        <ul class="cart-list">
+            <li>sium</li>
+        </ul>
     </main>
 
     <footer>
@@ -251,7 +165,7 @@
             </div>
         </div>
     </footer>
-    <script src="./components/scripts/item.js"></script>
-    <script src="./components/default/nav.js"></script>
+
+    <script src="./components/scripts/cart.js"></script>
 </body>
 </html>
