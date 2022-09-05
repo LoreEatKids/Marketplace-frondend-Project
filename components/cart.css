@@ -1,5 +1,39 @@
 main {
     color: black;
+    top: 130px;
+    position: relative;
+    width: 100%;
+}
+
+.pre-items {
+    text-decoration: underline 2px black;
+}
+
+.items-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.items-wrapper h1 {
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.count {
+    align-self: center;
+    font-size: 25px;
+    margin-right: 100px;
+}
+
+.items-wrapper p:not(.count) {
+    font-size: 16px;
+}
+
+.items-wrapper img {
+    width: 20%;
+    margin-right: 40px;
+    border-radius: 4px;
 }
 
 footer {
