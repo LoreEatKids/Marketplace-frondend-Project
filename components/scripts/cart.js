@@ -42,11 +42,11 @@ if (cartItems != null) {
 
         document.querySelector(".total-price").innerHTML =  `Prezzo totale: <b>${totalPrice.toFixed(2)}${currentCurrency}</b>`;
     });
-}
 
-if (cartItems.length === 0) {
-    messageEl.textContent = "Il Carrello è vuoto";
-    itemsContainerEl.style.display = "none";
+    if (cartItems.length === 0) {
+        messageEl.textContent = "Il Carrello è vuoto";
+        itemsContainerEl.style.display = "none";
+    }
 }
 
 document.querySelector(".clear").addEventListener("click", ()=> {
