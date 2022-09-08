@@ -1,5 +1,6 @@
 const cartItems = JSON.parse(localStorage.getItem('cart'));
 const messageEl = document.querySelector(".message");
+const itemsContainerEl = document.querySelector(".items-container");
 
 const currentCurrency = "$";
 
@@ -41,10 +42,11 @@ if (cartItems != null) {
 
         document.querySelector(".total-price").innerHTML =  `Prezzo totale: <b>${totalPrice.toFixed(2)}${currentCurrency}</b>`;
     });
+}
 
-} else {
-    messageEl.textContent = "Il carrello è vuoto!";
-    document.querySelector(".buttons-section").style.display = "none";
+if (cartItems.length === 0) {
+    messageEl.textContent = "Il Carrello è vuoto";
+    itemsContainerEl.style.display = "none";
 }
 
 document.querySelector(".clear").addEventListener("click", ()=> {
@@ -59,6 +61,9 @@ deleteButtons.forEach((btn, x) => {
         if (index > -1) {
             cartItems.splice(index, 1);
             window.localStorage.setItem("cart", JSON.stringify(cartItems));
+
+            const cartNumberItems = localStorage.getItem("cart-items-number") || 0;
+            window.localStorage.setItem("cart-items-number", cartNumberItems - 1)
             location.reload();
         }
     })
