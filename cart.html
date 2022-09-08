@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="components/default/header.css">
     <link rel="stylesheet" href="components/default/footer.css">
     <link rel="stylesheet" href="components/cart.css">
-    <title>View Your Cart Order</title>
+    <title>Il tuo carrello</title>
 </head>
 <body>
     <div class="wrapper"></div>
     <div class="aside-nav-deactive"></div>
 
     <header class="d-flex jc-sb">
-        <h1 class="logo" translate="no" title="Il miglior sito per l'acquisto di indumenti sportivi">MarketPlace</h1>
+        <h1 class="logo" translate="no" onclick="location.href = 'item.html';" title="Il miglior sito per l'acquisto di indumenti sportivi">MarketPlace</h1>
 
         <ul class="nav-links">
             <li><a href="#" class="link">Bambini</a></li>
@@ -104,21 +104,18 @@
     <main>
         
         <div class="pre-items">
-            <h1>Cart Items:</h1>
+            <div class="part-1">
+                <h1>Carrello</h1>
+                <p class="message"></p>
+            </div>
+            <div class="part-2"></div>
         </div>
 
         <div class="items-container">
-
-            <div class="items-wrapper">
-                <p class="count">1</p>
-                <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/239f10fa-e64b-4c19-87d1-18f08e23f417/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png">
-                <div class="item-dettails">
-                    <h1>NikeSuit</h1>
-                    <p>Taglia: XS</p>
-                    <p>Colore: Pink</p>
-                </div>
+            <div class="buttons-section" style="display: flex;">
+                <h1 class="total-price">Prezzo totale: 0</h1>
+                <button class="clear"role="button">Svuota il Carrello</button>
             </div>
-            
         </div>
 
     </main>
@@ -183,5 +180,6 @@
 
     <script src="./components/scripts/cart.js"></script>
     <script src="./components/default/nav.js"></script>
+    <noscript>This page needs JavaScript enabled to work as expected.</noscript>
 </body>
 </html>

@@ -54,11 +54,12 @@ color2El.addEventListener("click", ()=> {
 
 })
 
-const cartItems = [];
+const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
 document.querySelector("#confirm-btn").addEventListener("click", ()=> {
     const inputs = document.querySelectorAll("input[name='NikeSuitTaglia']");
     const inputsColor = document.querySelectorAll("input[name='NikeSuit']");
+    let existing = localStorage.getItem("cart")
 
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].checked) {
@@ -70,13 +71,14 @@ document.querySelector("#confirm-btn").addEventListener("click", ()=> {
 
             inputsColor.forEach(color => {
                 if (color.checked) {
-                    cartItems.push([valueName, valueTaglia, color.value.split(":")[2]])
+                    const valueColor = color.value.split(":")[2];
+                    
+                    cartItems.push([valueName, valueTaglia, valueColor])
                     window.localStorage.setItem("cart", JSON.stringify(cartItems))
                     window.localStorage.setItem("cart-items-number", Number(document.querySelector(".carrello").dataset.itemsNumber) + 1)
                 };
             })
 
-            console.log(cartItems, window.localStorage);            
             document.querySelector(".carrello").dataset.itemsNumber++;
         } 
     }
