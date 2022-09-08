@@ -45,6 +45,7 @@ if (cartItems != null) {
 
     if (cartItems.length === 0) {
         messageEl.textContent = "Il Carrello è vuoto";
+        window.localStorage.clear();
         itemsContainerEl.style.display = "none";
     }
 }
