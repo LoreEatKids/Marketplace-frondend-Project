@@ -29,6 +29,8 @@ main {
     margin-right: 100px;
 }
 
+.total-price {font-size: 25px;}
+
 .items-wrapper p:not(.count) {
     font-size: 16px;
 }
@@ -40,6 +42,7 @@ main {
 }
 
 .buttons-section {
+    display: flex;
     justify-content: center;
     gap: 30px;
     margin-bottom: 20px;
@@ -68,3 +71,41 @@ main {
 }
 
 .delete-button:hover { opacity: .9; }
+
+@media screen and (max-width: 1000px) {
+    .items-container {margin-top: 60px;}
+}
+
+@media screen and (max-width: 1200px) {
+    .items-wrapper img {width: 40%;}
+    .count {margin-right: 70px;}
+}
+
+@media screen and (max-width: 600px) {
+    .items-wrapper img {
+        width: 60%;
+    }
+
+    .buttons-section {
+        display: unset;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .buttons-section button {
+        margin-top: 20px;
+        padding: 2.5px .70rem;
+    }
+
+    .items-wrapper {
+        padding: 0 10px;
+    }
+
+    .count {margin-right: 50px;}
+}
+
+@media screen and (max-width: 450px) {
+    .count {margin-right: 25px;}
+    .items-wrapper img {margin-right: 20px;}
+    .items-wrapper:not(:last-child) {margin-bottom: 20px;}
+}
