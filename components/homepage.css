@@ -9,10 +9,13 @@
     border-radius: 10px;
     padding: 20px 300px;
     z-index: 9999;
-    
     display: none;
     background: antiquewhite;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    gap: 40px;
 }
 
 .column h1 {font-size: 1.2em; margin-bottom: 20px;}

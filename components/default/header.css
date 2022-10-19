@@ -35,6 +35,10 @@ header a::after {
 header a:hover::after {width: 100%;}
 /* header li a:hover .submenu {display: flex !important;} */
 
+header a:hover + .submenu{
+    display: flex;
+}
+
 .serch-links li[hamburger] {display: none;}
 .serch-links .carrello::after {
     content: attr(data-items-number);

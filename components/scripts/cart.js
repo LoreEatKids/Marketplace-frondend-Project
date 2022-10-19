@@ -2,7 +2,9 @@ const cartItems = JSON.parse(localStorage.getItem('cart'));
 const messageEl = document.querySelector(".message");
 const itemsContainerEl = document.querySelector(".items-container");
 
-const currentCurrency = "$";
+const footerEl = document.querySelector("footer");
+
+const currentCurrency = "$"; // todo: intl update
 
 const items = {
     NikeSuit: {
@@ -12,7 +14,6 @@ const items = {
         Nome: "NikeSuit",
     }
 }
-
 
 if (cartItems != null) {
 
@@ -38,7 +39,7 @@ if (cartItems != null) {
         </div>
         `
         container.insertAdjacentHTML("beforeend", html)
-        totalPrice += Number(itemPrice.replace(",","."));
+        totalPrice += +itemPrice.replace(",",".");
 
         document.querySelector(".total-price").innerHTML =  `Prezzo totale: <b>${totalPrice.toFixed(2)}${currentCurrency}</b>`;
     });
@@ -46,11 +47,13 @@ if (cartItems != null) {
     messageEl.textContent = "Il Carrello è vuoto";
     window.localStorage.clear();
     itemsContainerEl.style.display = "none";
+
+    footerEl.style.bottom = 0;
 }
 
 document.querySelector(".clear").addEventListener("click", ()=> {
     window.localStorage.clear();
-    location.reload()
+    location.reload();
 })
 
 const deleteButtons = document.querySelectorAll(".delete-button");

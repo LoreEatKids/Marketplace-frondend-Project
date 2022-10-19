@@ -8,7 +8,7 @@
 //     "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/0cd1a859-a4b8-420b-8d2c-6f6712dfbd15/scarpa-air-jordan-1-mid-se-9zbmsq.png"
 // ]
 
-const productsContainer = document.querySelector(".container");
+const productsContainer = document.querySelectorAll(".container");
 
 const homePage = {
     selectedCurrency: "$",
@@ -36,7 +36,7 @@ function displayProducts(products, selectedCurrency) {
             <p class="product-desc">${product[3]} - <b>${product[4]}</b></p>
         </li>
         `
-        productsContainer.insertAdjacentHTML("beforeend", html);
+        productsContainer.forEach(el => el.insertAdjacentHTML("beforeend", html));
     });
 };
 
