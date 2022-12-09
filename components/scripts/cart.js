@@ -1,19 +1,11 @@
+import { preferredCurrency } from "./config.js";
+import { allItems as items} from "./config.js";
+
 const cartItems = JSON.parse(localStorage.getItem('cart'));
 const messageEl = document.querySelector(".message");
 const itemsContainerEl = document.querySelector(".items-container");
 
 const footerEl = document.querySelector("footer");
-
-const currentCurrency = "$"; // todo: intl update
-
-const items = {
-    NikeSuit: {
-        Pink: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/239f10fa-e64b-4c19-87d1-18f08e23f417/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        Black: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1ab3e62a-8612-40b8-bfae-298f25c51312/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        Prezzo: "10,99",
-        Nome: "NikeSuit",
-    }
-}
 
 if (cartItems != null) {
 
@@ -33,7 +25,7 @@ if (cartItems != null) {
                 <h1>NikeSuit</h1>
                 <p>Taglia: ${item[1]}</p>
                 <p>Colore: ${item[2]}</p>
-                <p>Prezzo: ${itemPrice + currentCurrency}</p>
+                <p>Prezzo: ${itemPrice + preferredCurrency}</p>
                 <button class="delete-button">Elimina dal Carrello</button>
             </div>
         </div>
@@ -41,7 +33,7 @@ if (cartItems != null) {
         container.insertAdjacentHTML("beforeend", html)
         totalPrice += +itemPrice.replace(",",".");
 
-        document.querySelector(".total-price").innerHTML =  `Prezzo totale: <b>${totalPrice.toFixed(2)}${currentCurrency}</b>`;
+        document.querySelector(".total-price").innerHTML =  `Prezzo totale: <b>${totalPrice.toFixed(2)}${preferredCurrency}</b>`;
     });
 } else if (cartItems === null || cartItems.length === 0 || totalPrice === 0){
     messageEl.textContent = "Il Carrello è vuoto";

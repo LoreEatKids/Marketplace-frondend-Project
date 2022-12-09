@@ -55,7 +55,9 @@
         <ul class="serch-links">
             <li data-items-number="0" class="carrello">
                 <button>
-                    <img src="static/2.png" alt="carrello" class="icon">
+                    <a href="cart.html">
+                        <img src="static/2.png" alt="carrello" class="icon">
+                    </a>
                 </button>
             </li>
             <li>
@@ -132,7 +134,7 @@
 
         <div class="pre-content-text">
             <h1><b>DAI SEMPRE IL MEGLIO DI TE</b></h1>
-            <p>Scegli Nike!</p>
+            <p>Scopri Nike!</p>
 
             <div class="btn-container">
                 <button>Bambini</button>
@@ -144,75 +146,11 @@
     </section>
 
     <main>
-        <h1 class="title" translate="no">Magliette</h1>
+        <h1 class="title">Magliette</h1>
+        <ul class="shirts-container" id="container"></ul>
 
-        <ul class="container"></ul>
-
-        <h1 class="title" translate="no">Scarpe</h1>
-        <ul class="container">
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/e777c881-5b62-4250-92a6-362967f54cca/scarpa-air-force-1-07-2PL28X.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-
-            <li>
-                <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_2.0/w_521,c_limit/9656e742-4dfe-41d3-b768-c07aa86f4151/maglia-da-calcio-a-manica-corta-dri-fit-academy-R1jkvD.png">
-                <div class="price-container d-flex jc-sb">
-                    <h1 class="product-name">Prezzo</h1>
-                    <p class="product-prezzo">25,99$</p>
-                </div>
-                <p class="product-desc">Maglietta FIT - ragazzo</p>
-            </li>
-        </ul>
+        <h1 class="title">Scarpe</h1>
+        <ul class="shoes-container" id="container"></ul>
     </main>
 
     <footer>
@@ -273,7 +211,7 @@
         </div>
     </footer>
     <noscript>This page needs JavaScript enabled to work as expected.</noscript>
-    <script src="/components/scripts/home.js"></script>
+    <script src="/components/scripts/home.js" type="module"></script>
     <script src="/components/default/nav.js"></script>
 </body>
 </html>

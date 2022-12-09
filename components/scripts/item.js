@@ -1,23 +1,9 @@
-"use strict";
+import { productShowCase as imgs } from "./config.js";
 
 const container = document.querySelector(".img-section");
 const color1El = document.querySelector("#color-pink");
 const color2El = document.querySelector("#color-black");
 
-const imgs = {
-    linksLight:[
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/239f10fa-e64b-4c19-87d1-18f08e23f417/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/bd44f790-ae1b-4e97-8f13-c4f49d44492e/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ecaea942-fea8-495d-9ab9-db678f08ca28/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/0c905471-8a44-4c31-9d14-5ecdf813dde9/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-    ],
-    linksDark: [
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1ab3e62a-8612-40b8-bfae-298f25c51312/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/d7ab7716-6575-40cc-befe-c427386d180a/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ada71c5d-4e45-4a76-99d6-97be1c8e0b8e/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-        "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/87bc0e1a-8b39-413e-b86a-1b90976168c0/top-da-running-a-manica-lunga-dri-fit-CdmbB0.png",
-    ]
-}
 
 function displayItemsLight(arr) {
     arr.forEach(el => {
