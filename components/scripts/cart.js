@@ -6,7 +6,6 @@ const messageEl = document.querySelector(".message");
 const itemsContainerEl = document.querySelector(".items-container");
 const footerEl = document.querySelector("footer");
 
-<<<<<<< HEAD
 function italianTextCorrection() { return `${cartItems.length === 1 ? "C'è" : "Ci sono"} ${cartItems.length} ${cartItems.length === 1 ? "articolo" : "articoli"} nel tuo carrello`;}
 function isCartEmpty() { return cartItems === null || cartItems.length === 0 || totalPrice === 0; }
 
@@ -17,8 +16,6 @@ function cartIsEmpty() {
     footerEl.style.bottom = 0;
 }
 
-=======
->>>>>>> 7068fb94d58ce4738875adfd91fc83cafa21c261
 if (cartItems != null) {
 
     messageEl.textContent = italianTextCorrection();
