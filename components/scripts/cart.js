@@ -4,12 +4,24 @@ import { allItems as items} from "./config.js";
 const cartItems = JSON.parse(localStorage.getItem('cart'));
 const messageEl = document.querySelector(".message");
 const itemsContainerEl = document.querySelector(".items-container");
-
 const footerEl = document.querySelector("footer");
 
+<<<<<<< HEAD
+function italianTextCorrection() { return `${cartItems.length === 1 ? "C'è" : "Ci sono"} ${cartItems.length} ${cartItems.length === 1 ? "articolo" : "articoli"} nel tuo carrello`;}
+function isCartEmpty() { return cartItems === null || cartItems.length === 0 || totalPrice === 0; }
+
+function cartIsEmpty() {
+    messageEl.textContent = "Il Carrello è vuoto";
+    window.localStorage.clear();
+    itemsContainerEl.style.display = "none";
+    footerEl.style.bottom = 0;
+}
+
+=======
+>>>>>>> 7068fb94d58ce4738875adfd91fc83cafa21c261
 if (cartItems != null) {
 
-    messageEl.textContent = `${cartItems.length === 1 ? "C'è" : "Ci sono"} ${cartItems.length} ${cartItems.length === 1 ? "articolo" : "articoli"} nel tuo carrello`;
+    messageEl.textContent = italianTextCorrection();
     let totalPrice = 0;
 
     cartItems.forEach((item , x) => {
@@ -20,7 +32,7 @@ if (cartItems != null) {
         `
         <div class="items-wrapper">
             <p class="count">${x + 1}</p>
-            <img src="${items[item[0]][item[2]]}">
+            <img src="${items[item[0]][item[2]]}" alt=${items[0]["Prezzo"]}>
             <div class="item-dettails">
                 <h1>NikeSuit</h1>
                 <p>Taglia: ${item[1]}</p>
@@ -35,13 +47,7 @@ if (cartItems != null) {
 
         document.querySelector(".total-price").innerHTML =  `Prezzo totale: <b>${totalPrice.toFixed(2)}${preferredCurrency}</b>`;
     });
-} else if (cartItems === null || cartItems.length === 0 || totalPrice === 0){
-    messageEl.textContent = "Il Carrello è vuoto";
-    window.localStorage.clear();
-    itemsContainerEl.style.display = "none";
-
-    footerEl.style.bottom = 0;
-}
+} else if (isCartEmpty()) cartIsEmpty();
 
 document.querySelector(".clear").addEventListener("click", ()=> {
     window.localStorage.clear();
@@ -52,13 +58,14 @@ const deleteButtons = document.querySelectorAll(".delete-button");
 deleteButtons.forEach((btn, x) => {
     btn.addEventListener("click", () => {        
         const index = cartItems.indexOf(cartItems[x]);
-        if (index > -1) {
-            cartItems.splice(index, 1);
-            window.localStorage.setItem("cart", JSON.stringify(cartItems));
 
-            const cartNumberItems = localStorage.getItem("cart-items-number") || 0;
-            window.localStorage.setItem("cart-items-number", cartNumberItems - 1)
-            location.reload();
-        }
+        cartItems.splice(index, 1);
+        window.localStorage.setItem("cart", JSON.stringify(cartItems));
+
+        const cartNumberItems = localStorage.getItem("cart-items-number") || 0;
+        window.localStorage.setItem("cart-items-number", cartNumberItems - 1);
+        
+        if (isCartEmpty()) cartIsEmpty();
+        location.reload();
     })
 })
