@@ -1,4 +1,5 @@
 import { landingProducts } from "./config.js";
+"use strict";
 
 const shirtsContainer = document.querySelector(".shirts-container");
 const shoesContainer = document.querySelector(".shoes-container");
@@ -29,10 +30,9 @@ const nxtBtn = [...document.querySelectorAll(".swiper-button-next")];
 const prvBtn = [...document.querySelectorAll(".swiper-button-prev")];
 
 productsContainer.forEach((item, i) => {
+    console.log(nxtBtn[i])
     nxtBtn[i].addEventListener("click", ()=> item.scrollLeft += 300);
     prvBtn[i].addEventListener("click", ()=> item.scrollLeft -= 300);
-
-    console.log(item.scrollRight)
 
     item.addEventListener("scroll", ()=> {
         if(item.scrollLeft === 0) prvBtn[i].classList.add("disabled");

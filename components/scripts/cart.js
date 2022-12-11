@@ -1,6 +1,8 @@
 import { preferredCurrency } from "./config.js";
 import { allItems as items} from "./config.js";
 
+console.log(items["NikeSuit"])
+
 const cartItems = JSON.parse(localStorage.getItem('cart'));
 const messageEl = document.querySelector(".message");
 const itemsContainerEl = document.querySelector(".items-container");
@@ -22,6 +24,7 @@ if (cartItems != null) {
     let totalPrice = 0;
 
     cartItems.forEach((item , x) => {
+        console.log(items[item[0]][item[2]])
         const container = document.querySelector(".items-container");
 
         const itemPrice = items[item[0]]["Prezzo"];
@@ -29,7 +32,7 @@ if (cartItems != null) {
         `
         <div class="items-wrapper">
             <p class="count">${x + 1}</p>
-            <img src="${items[item[0]][item[2]]}" alt=${items[0]["Prezzo"]}>
+            <img src="${items[item[0]][item[2]]}" alt=${items[item[0]]["Prezzo"]}>
             <div class="item-dettails">
                 <h1>NikeSuit</h1>
                 <p>Taglia: ${item[1]}</p>
