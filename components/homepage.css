@@ -150,7 +150,17 @@ main {margin-top: 30px; margin-bottom: 100px;}
     .pre-content-text h1 {line-height: 50px;}
 
     .btn-container {gap: 30px}
-  }
+}
+
+@media only screen and (max-width: 500px) {
+    #container {gap: 30px}
+    #container img {width: 350px;}
+}
+
+@media only screen and (max-width: 400px) {
+    #container {gap: 10px}
+    #container img {width: 300px;}
+}
 
 @media only screen and (max-width: 430px) {.btn-container {gap: 20px}}
 @media only screen and (max-width: 390px) {.btn-container {gap: 10px}}

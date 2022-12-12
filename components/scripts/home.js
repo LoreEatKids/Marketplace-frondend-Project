@@ -1,5 +1,4 @@
 import { landingProducts } from "./config.js";
-"use strict";
 
 const shirtsContainer = document.querySelector(".shirts-container");
 const shoesContainer = document.querySelector(".shoes-container");
@@ -28,17 +27,20 @@ displayProducts(landingProducts.shoes, landingProducts.preferredCurrency, shoesC
 const productsContainer = [...document.querySelectorAll("#container")];
 const nxtBtn = [...document.querySelectorAll(".swiper-button-next")];
 const prvBtn = [...document.querySelectorAll(".swiper-button-prev")];
+let maxScrollLeft = 0;
 
 productsContainer.forEach((item, i) => {
-    console.log(nxtBtn[i])
     nxtBtn[i].addEventListener("click", ()=> item.scrollLeft += 300);
     prvBtn[i].addEventListener("click", ()=> item.scrollLeft -= 300);
 
+    
     item.addEventListener("scroll", ()=> {
+        maxScrollLeft = item.scrollWidth - item.clientWidth;
+        
         if(item.scrollLeft === 0) prvBtn[i].classList.add("disabled");
-        if(item.scrollLeft === 1110) nxtBtn[i].classList.add("disabled");
+        if(item.scrollLeft === maxScrollLeft) nxtBtn[i].classList.add("disabled");
 
         if(item.scrollLeft != 0) prvBtn[i].classList.remove("disabled");
-        if(item.scrollLeft != 1110) nxtBtn[i].classList.remove("disabled");
+        if(item.scrollLeft != maxScrollLeft) nxtBtn[i].classList.remove("disabled");
     })
 })
