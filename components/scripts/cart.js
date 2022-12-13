@@ -18,7 +18,7 @@ function cartIsEmpty() {
     messageEl.textContent = "Il Carrello è vuoto";
     window.localStorage.clear();
     itemsContainerEl.style.display = "none";
-    footerEl.style.bottom = 0;
+    footerEl.classList.add("bottom-0");
 }
 
 function displayCartItems() {
@@ -73,4 +73,4 @@ deleteButtons.forEach((btn, x) => {
         if (isCartEmpty()) cartIsEmpty();
         location.reload();
     })
-})
+})  

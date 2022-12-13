@@ -6,7 +6,11 @@ footer {
     color: #fff;
     padding: 48px 38px;
 
-    z-index: -1; /* beacuse of mobile nav */
+    z-index: -1; /* mobile nav */
+}
+
+.bottom-0 {
+    bottom: 0;
 }
 
 footer a {color: rgb(160, 160, 160)}
@@ -90,4 +94,9 @@ footer a {color: rgb(160, 160, 160)}
         flex-direction: column;
     }
     .footer-meta .rights {margin-bottom: 20px;}
+}
+
+@media only screen and (max-width: 720px){
+    main {margin-bottom: 250px !important;}
+    .bottom-0 {bottom: unset !important;}
 }
